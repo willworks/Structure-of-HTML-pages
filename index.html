@@ -1,0 +1,104 @@
+<!-- 
+*Structure of HTML pages html代码规范及页面架构
+*Cross Browser and Screen Compatible 跨浏览器兼容和跨设备(移动设备)显示兼容以及标签语义化
+*@author Kevin Zhong
+*@github  https://github.com/willworks 
+*@关于规范:
+ - 标签闭合，包括meta、br、hr
+ - 代码注释
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Structure of HTML pages</title>
+    <!--==================================html meta标签大集合========================================-->
+    <!-- http-equiv 属性 HTTP协议的响应头报文 --> 
+    <!--页面内容类型以及编码方式-->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+
+    <!-- Edge 模式告诉 IE 以最高级模式渲染文档，也就是任何 IE 版本都以当前版本所支持的最高级标准模式渲染[如content="IE=IE9,chrome=1"]，避免版本升级造成的影响。简单的说，就是什么版本 IE 就用什么版本的标准模式渲染 -->
+    <!-- Google 官方提供了对 Google Frame 插件安装情况的检测，这里直接调用方法即可，如果检测到 IE 并未安装 Google Frame，则弹出对话框提示安装。 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+    <!--页面语言-->
+    <meta http-equiv="content-language" content="zh-CN" /> 
+
+    <!--网页作者-->
+    <meta name="author" content="Kevin Zhong" />
+
+    <!--网页描述-->
+	<meta name="description" content="Structure of HTML pages">
+
+	<!--关键词-->
+	<meta name="keywords" content="Structure of HTML pages"> 
+
+    <!--
+    重定向 第一个参数是秒数 第二个参数为重定向的地址
+    <meta http-equiv="Refresh" content="5;url=http://willworks.club">
+
+    缓存过期时间 必须用GMT时间 一旦网页过期，必须到服务器上重新传输。
+    <meta http-equiv="expires" content="Sunday 26 October 2008 01:00 GMT" />
+
+    是否缓存，某些时候为了提高速度会禁止缓存，但是就不能离线缓存；或者是因为某种情况直接禁止离线访问
+    <meta http-equiv="pragma" content="no-cache" />
+    
+    收索引擎
+    <meta name="robots" content="noindex, nofollow" />
+    -->
+
+    <!--==================================html meta移动端优化=======================================-->
+    <!-- 
+    viewport即可视区域，对于桌面浏览器而言，viewport指的就是除去所有工具栏、状态栏、滚动条等等之后用于看网页的区域 
+    width: viewport 的宽度 （范围从 200 到 10,000 ，默认为 980 像素 ）默认为设备宽度
+    initial-scale: 初始的缩放比例 （范围从>0到 10 ）
+    minimum-scale: 允许用户缩放到的最小比例
+    maximum-scale: 允许用户缩放到的最大比例
+    user-scalable: 用户是否可以手动缩放 
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 控制状态栏显示样式-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 删除默认的苹果工具栏和菜单栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- telephone=no就禁止了把数字转化为拨号链接-->
+    <meta name="format-detection" content="telephone=no,email=no" />
+
+    <!--==============================引入外部CSS以及需要预先加载的js===================================-->
+    <!-- 初始样式 -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 通用样式 -->
+    <link rel="stylesheet" href="css/style.css" /> 
+    <!-- 大屏独立样式 -->
+    <link 
+	rel="stylesheet" 
+	type="text/css" 
+	media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" 
+	href="/assets/css/pad.css" 
+	/>
+	<!-- pad独立样式 -->
+	<link 
+	rel="stylesheet" 
+	type="text/css" 
+	media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" 
+	href="/assets/css/pad.css" 
+	/>
+	<!-- phone独立样式 -->
+	<link 
+	rel="stylesheet" 
+	type="text/css" 
+	media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" 
+	href="/assets/css/phone.css" 
+	/>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
