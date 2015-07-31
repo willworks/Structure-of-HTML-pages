@@ -1,6 +1,6 @@
 <!-- 
     Document   : Structure of HTML pages
-    Created on : 2015.8.6 15:41:00
+    Created on : 2015.8
     Author     : Kevin Zhong
     License    : MIT
     github     : https://github.com/willworks 
@@ -9,6 +9,7 @@
 -->
 <!DOCTYPE html>
 <html>
+<!-- head -->
 <head>
     <title>Structure of HTML pages</title>
     <!--==================================html meta标签大集合========================================-->
@@ -64,34 +65,53 @@
     <meta name="format-detection" content="telephone=no,email=no" />
 
     <!--==============================引入外部CSS以及需要预先加载的js===================================-->
-    <!-- 初始样式 -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <!-- 通用样式 -->
-    <link rel="stylesheet" href="css/style.css" /> 
-    <!-- 大屏独立样式 -->
-    <link 
-	rel="stylesheet" 
-	type="text/css" 
-	media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" 
-	href="/assets/css/pad.css" 
-	/>
-	<!-- pad独立样式 -->
-	<link 
-	rel="stylesheet" 
-	type="text/css" 
-	media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" 
-	href="/assets/css/pad.css" 
-	/>
-	<!-- phone独立样式 -->
-	<link 
-	rel="stylesheet" 
-	type="text/css" 
-	media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" 
-	href="/assets/css/phone.css" 
-	/>
+    <!-- 
+    外部样式表
+
+    和<style>@import url(main.css)</style>的区别
+    import是在加载完其他样式表之后才加载的，也就是说不会一开始都加载好，所以使用在样式表文件内使用@import 增加一个来回从而延长了页面的下载时间。
+	使用@import会改变IE的下载顺序。这可能会导致样式表文件需要更长的时间才能下载，从而阻碍页面的渲染，使用户感觉很慢。
+    -->
+    <link rel="stylesheet" type="text/css" href="" />
+
+    <!-- 内部样式表 -->
+    <style class="" rel="stylesheet" type="text/css">
+	</style>
+
 </head>
+<!-- END head -->
+
+<!-- body -->
 <body>
+
+	<div class="section-wrap">
+		<div class="section-wrap section-header">
+			<div class="section-wrap section-nav">
+			    <div class="section"></div>
+			</div>
+		</div>
+
+		<div class="section-wrap section-sidebar">
+		    <div class="section"></div>
+		</div>
+
+		<div class="section-wrap section-main">
+		    <div class="section"></div>
+		</div>
+
+		<div class="section-wrap section-footer">
+		    <div class="section"></div>
+		</div>
+	</div>
+	<!--=================引入外部js，由于加载js时阻塞页面渲染，故置于body底部===========================-->
+	<!-- js -->
+	<script type="text/javascript" src="" charset="utf-8"></script>
+
+	<script class="" type="text/javascript" charset="utf-8">
+
+	</script>
 </body>
+<!-- END body -->
 </html>
 
 
