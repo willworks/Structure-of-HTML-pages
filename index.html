@@ -83,26 +83,33 @@
 
 <!-- body -->
 <body>
+    <!--
+    标签规范:
+    section-wrap 
+    section-component 组件特有属性
+     -section-header 头部
+     -section-nav 导航
+     -section-sidebar 侧边导航栏
+     -section-main 主体
+     -section-footer 底部
+    section 包裹内容块
+    -->
+    <div class="section-wrap section-header">
+        <div class="section"></div>
+    </div>
+    <div class="section-wrap section-nav">
+        <div class="section"></div>
+    </div>
+    <div class="section-wrap section-sidebar">
+        <div class="section"></div>
+    </div>
 
-	<div class="section-wrap">
-		<div class="section-wrap section-header">
-			<div class="section-wrap section-nav">
-			    <div class="section"></div>
-			</div>
-		</div>
-
-		<div class="section-wrap section-sidebar">
-		    <div class="section"></div>
-		</div>
-
-		<div class="section-wrap section-main">
-		    <div class="section"></div>
-		</div>
-
-		<div class="section-wrap section-footer">
-		    <div class="section"></div>
-		</div>
-	</div>
+    <div class="section-wrap section-main">
+        <div class="section"></div>
+    </div>
+    <div class="section-wrap section-footer">
+        <div class="section"></div>
+    </div>
 	<!--=================引入外部js，由于加载js时阻塞页面渲染，故置于body底部===========================-->
 	<!-- js -->
 	<script type="text/javascript" src="" charset="utf-8"></script>
